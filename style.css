@@ -1,0 +1,305 @@
+<style>
+	* {
+		margin: 0;
+		padding: 0
+	}
+	body {
+		margin: 0;
+		font-family: Lato;
+		background-image: url("Pics/cats.png");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+	nav {
+		overflow: hidden;
+		background-color:#333;
+		padding-top:10px;
+		padding-bottom:10px;
+		border-color: #333;
+	}
+	li {
+		float: right;
+		list-style-type: none;
+		background-color: #333
+	}
+	li a {
+		display: block;
+		text-decoration: none;
+		color: white;
+		padding: 20px 20px 20px 20px;
+		font-size: 20px
+	}
+	li a:hover {
+		color: gray
+	}
+	#logo {
+		width: 75px;
+		height: 75px;
+		padding-left: 20px
+	}
+	div.container {
+		text-align: center;
+	}
+	#cats {
+		filter: blur(5px);
+		width: 100%;
+	}
+	#TitleText {
+		top: 26%;
+		left: 26%;
+		font-size:100px;
+		position: absolute;
+		text-shadow: 2px 2px 8px #000000;
+		color: white;
+		text-align: center
+	}
+	#BodyText {
+		text-align: center;
+		font-size: 30px;
+		top: 50%;
+		left: 28%;
+		position: absolute;
+		text-shadow: 2px 2px 8px #000000;
+		color: white;
+	}
+	#rick {
+		position: absolute;
+		top: 120%;
+		opacity: 0;
+		width: 100px;
+	}
+	#cat_breed {
+		position: absolute;
+		width: 250px;
+		height: 250px;
+		top: 70%;
+		left: 15%;
+		padding: 20px;
+		border-radius: 30px;
+	}
+	#cat_breed:hover {
+		opacity: 0.7;
+	}
+	#cat_breed_label {
+		position: absolute;
+		color: white;
+		top: 112.5%;
+		left: 18.5%;
+		text-shadow: 2px 2px 8px #000000;
+		text-align: center;
+		font-size: 20px;
+		padding: 10px;
+		border-radius: 10px;
+		background-color: rgb(211,211,211,0.3)
+	}
+	#cat_facts {
+		position: absolute;
+		width: 250px;
+		height: 250px;
+		top: 70%;
+		left: 60%;
+		padding: 20px;
+		border-radius: 30px;
+	}
+	#cat_facts:hover {
+		opacity: 0.7;
+	}
+	#cat_facts_label {
+		position: absolute;
+		color: white;
+		top: 112.5%;
+		left: 67.5%;
+		text-shadow: 2px 2px 8px #000000;
+		text-align: center;
+		font-size: 20px;
+		padding: 10px;
+		border-radius: 10px;
+		background-color: rgb(211,211,211,0.3)
+	}
+	.contacts {
+		position: absolute;
+		text-align: center;
+		font-size: 40px;
+		color: white;
+		text-shadow: 2px 2px 8px #000000;
+		top: 30%;
+		left: 25%;
+		border-radius: 10px;
+		padding: 20px;
+		background: rgba(211,211,211,0.4);
+	}
+	.about {
+		position: absolute;
+		text-align: center;
+		font-size: 35px;
+		color: white;
+		text-shadow: 2px 2px 8px #000000;
+		top: 40%;
+		left: 7%;
+		border-radius: 10px;
+		padding: 20px;
+		background: rgba(211,211,211,0.4);
+	}
+	.list {
+		background-color: rgb(211,211,211,0.3);
+		color: white;
+	}
+	#ragdoll {
+		position: absolute;
+		padding: 20px;
+		top: 20%;
+		left: 5%;
+		font-size: 50px;
+		text-shadow: 2px 2px 8px #000000;
+	}
+	#ragdoll_img {
+		position: absolute;
+		padding: 20px;
+		top: 40%;
+		left: 5%;
+		border-radius: 10px;
+		width: 300px;
+	}
+	#ragdoll_img:hover {
+		opacity: 0.7;
+	}
+	#ragdollInfo {
+		position: absolute;
+		padding: 20px;
+		top:40%;
+		left: 30%;
+		color: white;
+		text-shadow: 2px 2px 8px #000000;
+		font-size: 30px;
+		background-color: rgb(211,211,211,0.3);
+		border-radius: 20px;
+	}
+	#maine {
+		position: absolute;
+		padding: 20px;
+		top: 70%;
+		right: 5%;
+		font-size: 50px;
+		text-shadow: 2px 2px 8px #000000;
+	}
+	#maine_img {
+		position: absolute;
+		padding: 20px;
+		top: 90%;
+		right: 5%;
+		border-radius: 10px;
+		width: 300px;
+	}
+	#maine_img:hover {
+		opacity: 0.7;
+	}
+	#maineInfo {
+		position: absolute;
+		padding: 20px;
+		top:87%;
+		right: 30%;
+		color: white;
+		text-shadow: 2px 2px 8px #000000;
+		font-size: 30px;
+		background-color: rgb(211,211,211,0.3);
+		border-radius: 20px;
+	}
+	#siam {
+		position: absolute;
+		padding: 20px;
+		top: 117%;
+		left: 5%;
+		font-size: 50px;
+		text-shadow: 2px 2px 8px #000000;
+	}
+	#siam_img {
+		position: absolute;
+		padding: 20px;
+		top: 137%;
+		left: 5%;
+		border-radius: 10px;
+		width: 300px;
+	}
+	#siam_img:hover {
+		opacity: 0.7;
+	}
+	#siamInfo {
+		position: absolute;
+		padding: 20px;
+		top: 134%;
+		left: 30%;
+		color: white;
+		text-shadow: 2px 2px 8px #000000;
+		font-size: 30px;
+		background-color: rgb(211,211,211,0.3);
+		border-radius: 20px;
+	}
+	#british {
+		position: absolute;
+		padding: 20px;
+		top: 164%;
+		right: 5%;
+		font-size: 50px;
+		text-shadow: 2px 2px 8px #000000;
+	}
+	#british_img {
+		position: absolute;
+		padding: 20px;
+		top: 184%;
+		right: 5%;
+		border-radius: 10px;
+		width: 300px;
+	}
+	#british_img:hover {
+		opacity: 0.7;
+	}
+	#britishInfo {
+		position: absolute;
+		padding: 20px;
+		top:184.5%;
+		right: 30%;
+		color: white;
+		text-shadow: 2px 2px 8px #000000;
+		font-size: 30px;
+		background-color: rgb(211,211,211,0.3);
+		border-radius: 20px;
+	}
+	#persian {
+		position: absolute;
+		padding: 20px;
+		top: 215%;
+		left: 5%;
+		font-size: 50px;
+		text-shadow: 2px 2px 8px #000000;
+	}
+	#persian_img {
+		position: absolute;
+		padding: 20px;
+		top: 235%;
+		left: 5%;
+		border-radius: 10px;
+		width: 300px;
+	}
+	#persian_img:hover {
+		opacity: 0.7;
+	}
+	#persianInfo {
+		position: absolute;
+		padding: 20px;
+		top:232%;
+		left: 30%;
+		color: white;
+		text-shadow: 2px 2px 8px #000000;
+		font-size: 30px;
+		background-color: rgb(211,211,211,0.3);
+		border-radius: 20px;
+	}
+	.factsList {
+		color: white;
+		text-shadow: 2px 2px 8px #000000;
+		font-size:35px;
+		font-weight: bold;
+		padding: 20px;
+		background-color: rgb(211,211,211,0.1);
+	}
+</style>
